@@ -1,17 +1,26 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" href="builder.css">
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="controller.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div id="app">
             <div class="top-panel panel">
-
-            </div>
-            <div class="center-panel panel">
-
+                <p>QueryBuilder</p>
             </div>
             <div class="side-panel panel">
-
+                {{ message }}
+            </div>
+            <div class="center-panel panel">
+                <select class="form-control" v-model="selectedTable">
+                    <option disabled value="">Select table...</option>
+                    <option v-for="table in tables" v-bind:value="table.name">
+                        {{ table.name }}
+                    </option>
+                </select>
             </div>
         </div>
     </body>

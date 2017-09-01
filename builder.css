@@ -1,27 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body{
-    background-image: url('background.jpg');
-    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
-div.container{
+div#app{
     display: flex;
     justify-content: center;
-    align-content: center;
     flex-wrap: wrap;
 }
 div.panel{
     background-color: #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    margin: 7px;
+    margin: 0;
 }
 div.center-panel{
-    height: 80%;
-    width: 65%;
+    height: calc(100% - 54px);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 div.top-panel{
-    height: 15%;
-    width: 96%;
+    width: 100%;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    height: 54px;
 }
 div.side-panel{
-    height: 80%;
-    width: 30%;
+    height: calc(100% - 54px);
+    width: 20%;
+    background-color: #d2d2d2
+}
+div.center-panel select{
+    width: 300px;
 }

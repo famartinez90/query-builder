@@ -77,7 +77,7 @@ class DatabaseAdapter {
 		
 		if (params.joins !== undefined) {
 			for (let join of params.joins) {
-				query += `JOIN ${join.table} ON ${join.table}.id = ${params.from}.${join.on} `;
+				query += `JOIN ${join.table} ON ${join.table}.${join.on} = ${join.to} `;
 			}
 		}
 		
