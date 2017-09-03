@@ -1,5 +1,25 @@
 window.onload = function () {
-    let tables = []
+    let tables = [
+        'usuario',
+        'inmobiliaria',
+        'sucursal',
+        'propiedad'
+    ];
+
+    let fields = [
+        'usuario.id',
+        'usuario.nombre',
+        'inmobiliaria.id',
+        'inmobiliaria.nombre',
+        'sucursal.id',
+        'sucursal.nombre',
+        'propiedad.id',
+        'propiedad.titulo'
+    ];
+
+    let selectedFields = [
+        
+    ];
 
     var app = new Vue({
         el: '#app',
